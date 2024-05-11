@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Characters = async () => {
   const characters = await fetchCharacters();
-  console.log(characters);
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Characters</h1>
@@ -15,7 +14,7 @@ const Characters = async () => {
           <li className="w-1/3 p-4">
             <div className="flex flex-col items-center">
               {character.name ? (
-                 <Link href={`/${(character.id)}`}>
+                 <Link href={`/characters/${character.url.split('/')[5]}`}>
                 <p className="mt-2">{character.name}</p>
                 </Link>
               ) : (
