@@ -18,7 +18,7 @@ export default async function MoviesDetailPage({ params }) {
           />
         <p>Episode: {episode_id}</p>
         <p>Director: {director}</p>
-        <Link href="/">Volver</Link>
+        <Link href="/movies">Volver</Link>
         </div>
     )
   }
